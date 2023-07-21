@@ -13,9 +13,7 @@ app.use(cors());
 app.use(express.json());
 mongoose
   .connect(
-    "mongodb+srv://Karan_Gondaliya:" +
-      process.env.MONGO_PASSWORD +
-      "@cluster0.my2k6el.mongodb.net/?retryWrites=true&w=majority"
+    process.env.MONGO_URL
   )
   .then(() => {
     console.log("Connected to mongo!");
